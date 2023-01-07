@@ -98,7 +98,7 @@ export default function EditListing() {
     e.preventDefault()
     setLoading(true)
     // Checking some conditions in the form
-    if(discountedPrice >= regularPrice) {
+    if(+discountedPrice >= +regularPrice) {
         setLoading(false)
         toast.error("Discounted price needs to be less than regular price!")
         return
